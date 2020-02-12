@@ -12,7 +12,13 @@ import org.springframework.web.multipart.MultipartFile;
 
 import br.com.gft.crudgame.model.Game;
 import br.com.gft.crudgame.repository.GameRepository;
-
+import br.com.gft.crudgame.repository.TituloFilter;
+/**
+ * Camada de service da aplicação
+ * 
+ * @author Leandro
+ * @version 1.0
+ */
 @Service
 public class GameService {
 
@@ -23,6 +29,11 @@ public class GameService {
 
 	public List<Game> listAll() {
 		return games.findAll();
+	}
+	
+	public List<Game> pequisar(TituloFilter filtro){
+		String nome = filtro.getNome() == null ? "" : filtro.getNome();
+		return games.findByNomeContaining(nome);
 	}
 
 	public Game get(Long id) {

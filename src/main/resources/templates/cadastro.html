@@ -22,7 +22,7 @@
     <label for="exampleFormControlInput1">Data do cadastro</label>
     <input type="text" class="form-control" placeholder="Data" th:field="*{dataCadastro}">
   </div>
-  <div class="form-group" th:classappend="${#fields.hasErrors('valor')} ? has-error">
+  <div class="form-group" th:classappend="${#fields.hasErrors('valor')} ? is-valid">
     <label for="exampleFormControlInput1">Preço do game</label>
     <input type="text" class="form-control" placeholder="Preço" th:field="*{valor}" id="currency">
   </div>

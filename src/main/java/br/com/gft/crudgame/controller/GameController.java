@@ -19,18 +19,25 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import br.com.gft.crudgame.model.CategoriaGame;
 import br.com.gft.crudgame.model.Game;
+import br.com.gft.crudgame.repository.TituloFilter;
 import br.com.gft.crudgame.service.GameService;
-
+/**
+ * Camada de controller da aplicação
+ * 
+ * @author Leandro 
+ * @version 1.0
+ */
 @Controller
 public class GameController {
 
 	@Autowired
 	private GameService games;
 	
-	@RequestMapping("/")
-	public ModelAndView index() {
+	@RequestMapping
+	public ModelAndView index(@ModelAttribute("filtro") TituloFilter filtro) {
 
-		List<Game> jogos = games.listAll();
+		 List<Game> jogos = games.pequisar(filtro);
+		
 		ModelAndView mv = new ModelAndView("index");
 		mv.addObject("listaJogos", jogos);
 

@@ -17,6 +17,13 @@ import javax.validation.constraints.NotNull;
 
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.format.annotation.NumberFormat;
+/**
+ * Camada do model entidade representa informação do jogo 
+ * 
+ * @author Leandro
+ * @version 1.0
+ *
+ */
 
 @Entity
 public class Game {
