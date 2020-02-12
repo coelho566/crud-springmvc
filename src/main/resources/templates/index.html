@@ -30,7 +30,7 @@
 	  </thead>
 	  <tbody>
 	    <tr th:each="jogo : ${listaJogos}">
-	      <th><img class="img-thumbnail" th:attr="src=@{/imagens/{foto}(foto=${jogo.foto})}" style="width: 6rem;" ></th>
+	      <th><img class="img-thumbnail" th:attr="src=@{/imagens/{foto}(foto=${jogo.foto})}" style="width: 6rem; height: 4rem;" ></th>
 	      <td class="align-middle" th:text="${jogo.nome}"></td>
 	      <td class="align-middle" th:text="${jogo.categoria}"></td>
 	      <td class="align-middle" th:text="|R$ ${{jogo.valor}}|"></td>

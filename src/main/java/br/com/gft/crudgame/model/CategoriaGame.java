@@ -6,7 +6,7 @@ public enum CategoriaGame {
 	AVENTURA("Aventura"),
 	RPG("RPG"),
 	CORRIDA("Corrida"),
-	LUTA("Luta");
+	ESPORTE("Esporte");
 	
 	private String descricao;
 	
