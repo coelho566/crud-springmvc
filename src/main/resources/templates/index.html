@@ -32,7 +32,7 @@
 	    <tr th:each="jogo : ${listaJogos}">
 	      <th><img class="img-thumbnail" th:attr="src=@{/imagens/{foto}(foto=${jogo.foto})}" style="width: 6rem; height: 4rem;" ></th>
 	      <td class="align-middle" th:text="${jogo.nome}"></td>
-	      <td class="align-middle" th:text="${jogo.categoria}"></td>
+	      <td class="align-middle" th:text="${jogo.categoria.descricao}"></td>
 	      <td class="align-middle" th:text="|R$ ${{jogo.valor}}|"></td>
 	      <td class="align-middle" th:text="${{jogo.dataCadastro}}"></td>
 	      <td class="align-middle"><a th:href="@{/editar/{id}(id=${jogo.id})}" class="btn btn-primary" type="button" rel="tooltip" data-placement="top" title="Editar"><i class="fas fa-pen "></i></a></td>
